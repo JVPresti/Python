@@ -42,11 +42,17 @@ if(dato%2)!=0:
 
 n1= int(input("Ingrese el primer entero: ")) #Se espera un número entero
 n2= int(input("Ingrese el segundo entero: ")) #Se espera un número entero
-if(n1%n2)==0:
-    print(n1, 'es múltiplo de', n2) #Imprime que n1 es múltiplo de n2
-if(n1%n2)!=0:
-    print(n1, 'no es múltiplo de', n2) #Imprime que n1 no es múltiplo de n2
-
+if(n1>n2):
+    if(n1%n2)==0:
+        print(n1, 'es múltiplo de', n2) #Imprime que n1 es múltiplo de n2
+    if(n1%n2)!=0:
+        print(n1, 'no es múltiplo de', n2) #Imprime que n1 no es múltiplo de n2
+if(n1<n2):
+    if(n2%n1)==0:
+        print(n2, 'es múltiplo de', n1) #Imprime que n2 es múltiplo de n1
+    if(n2%n1)!=0:
+        print(n2, 'no es múltiplo de', n1) #Imprime que n2 no es múltiplo de n1
+    
 # Ejercicio 7
 
 print("Numero\tCuadrado\tCubo") #Imprime el encabezado de la tabla
@@ -59,11 +65,13 @@ print(5, '\t', 5**2, '\t\t', 5**3) #Imprime el valor de 5, su cuadrado y su cubo
 
 # Ejercicio 8
 
-print('Número'.rjust(7), 'Cuadrado'.rjust(9), 'Cubo'.rjust(9))
-print(str(1).rjust(7), str(1**2).rjust(9), str(1**3).rjust(9)) 
-print(str(0).rjust(7), str(0**2).rjust(9), str(0**3).rjust(9)) 
-print(str(2).rjust(7), str(2**2).rjust(9), str(2**3).rjust(9)) 
-print(str(3).rjust(7), str(3**2).rjust(9), str(3**3).rjust(9)) 
-print(str(4).rjust(7), str(4**2).rjust(9), str(4**3).rjust(9)) 
-print(str(5).rjust(7), str(5**2).rjust(9), str(5**3).rjust(9)) 
+print(f'{"Número":>7} {"Cuadrado":>9} {"Cubo":>9}')
+print(f'{0:>7} {0**2:>9} {0**3:>9}')
+print(f'{1:>7} {1**2:>9} {1**3:>9}')
+print(f'{2:>7} {2**2:>9} {2**3:>9}')
+print(f'{3:>7} {3**2:>9} {3**3:>9}')
+print(f'{4:>7} {4**2:>9} {4**3:>9}')
+print(f'{5:>7} {5**2:>9} {5**3:>9}')
+
+
 """
